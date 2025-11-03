@@ -6,7 +6,7 @@
 //   end
 // endmodule
 
-module cla #(parameter BITWIDTH = 8;) ( //testing should involve 8, 16, 32, and 64 bit widths
+module cla #(parameter BITWIDTH = 8;) ( //testing should involve 8, 16, 32, and 64 bit widths (change parameter to change bit width)
     input [BITWIDTH - 1:0] bits_a,
     input [BITWIDTH - 1:0] bits_b,
     input carry_in,
@@ -18,7 +18,7 @@ module cla #(parameter BITWIDTH = 8;) ( //testing should involve 8, 16, 32, and 
     assign carry[0] = carry_in;
 
     genvar i;
-        for (i = 0; i < BITWIDTH; i = i + 1) begin //loop ensures that the right carry is used for each bit adder
+        for (i = 0; i < BITWIDTH; i++) begin //loop ensures that the right carry is used for each bit adder
             assign sum[i] = (bits_a[i] ^ bits_b[i] ^ carry[i]) | (bits_a[i] & bits_b[i] & carry[i]); //either only 1 input or all of them to set the sum
             assign carry[i + 1] = (bits_b[i] & carry[i]) | (bits_a[i] & carry[i]) | (bits_a[i] & bits_c[i]); //carry generated if any two of the three inputs are 1
         end
