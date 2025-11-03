@@ -6,7 +6,7 @@
 //   end
 // endmodule
 
-module cla #(parameter BITWIDTH = 8;) ( //testing should involve 8, 16, 32, and 64 bit widths (change parameter to change bit width)
+module rca #(parameter BITWIDTH = 8;) ( //testing should involve 8, 16, 32, and 64 bit widths (change parameter to change bit width)
     input [BITWIDTH - 1:0] bits_a,
     input [BITWIDTH - 1:0] bits_b,
     input carry_in,
