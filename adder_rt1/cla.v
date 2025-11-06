@@ -1,4 +1,4 @@
-module cla #(parameter BITWIDTH = 8;) ( //change parameter when testing for different bit-width adders
+module cla #(parameter BITWIDTH = 8) ( //change parameter when testing for different bit-width adders
     input [BITWIDTH - 1:0] bits_a,
     input [BITWIDTH - 1:0] bits_b,
     input carry_in,
@@ -15,7 +15,8 @@ module cla #(parameter BITWIDTH = 8;) ( //change parameter when testing for diff
     assign carry[0] = carry_in; //initial carry in
 
     genvar i;
-        for (i = 0; i < BITWIDTH; i++) begin //loop ensures the propagate and generate signals are created for each bit
+    generate
+        for (i = 0; i < BITWIDTH; i = i + 1) begin //loop ensures the propagate and generate signals are created for each bit
             assign p[i] = bits_a[i] | bits_b[i]; //propagate
             assign g[i] = bits_a[i] & bits_b[i]; //generate
 
@@ -36,6 +37,7 @@ module cla #(parameter BITWIDTH = 8;) ( //change parameter when testing for diff
                 assign block_generate = G_calculations[BITWIDTH - 1]; //final block generate calculation is the n-bit block generate signal
             end
         end
+    endgenerate
 
     assign carry_out = block_generate | (block_propagate & carry[0]); //final carry out - based on block propagate and generate signals
 

@@ -1,4 +1,4 @@
-module prefix #(parameter BITWIDTH = 8;) ( //change BITWIDTH as needed for adder size
+module prefix #(parameter BITWIDTH = 8) ( //change BITWIDTH as needed for adder size
     input [BITWIDTH - 1:0] bits_a,
     input [BITWIDTH - 1:0] bits_b,
     input carry_in,
@@ -18,6 +18,7 @@ module prefix #(parameter BITWIDTH = 8;) ( //change BITWIDTH as needed for adder
     wire g_intermediate; //intermediate wire for generate calculation
 
     genvar i, j;
+    generate
         for (i = 1; i <= BITWIDTH; i = i + 1) begin //from bit 1 to BITWIDTH
             assign g_intermediate = g[i - 1];
             for (j = i - 1; j > 0; j = j - 1) begin //from bit i-1 down to bit 1
@@ -25,6 +26,7 @@ module prefix #(parameter BITWIDTH = 8;) ( //change BITWIDTH as needed for adder
             end
             assign c[i] = g_intermediate;
         end
+    endgenerate
 
     // Calculate final sum bits
     assign sum = bits_a ^ bits_b ^ c[BITWIDTH - 1:0];
