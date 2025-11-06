@@ -10,26 +10,20 @@ module prefix #(parameter BITWIDTH = 8) ( //change BITWIDTH as needed for adder 
     wire [BITWIDTH:0] c; //track carry-in signals
 
     //calculate generate and propagate signals
-    assign g = a & b;
-    assign p = a | b;
+    assign g = bits_a & bits_b;
+    assign p = bits_a ^ bits_b;
 
     assign c[0] = carry_in; //initialize carry-in
 
-    wire g_intermediate; //intermediate wire for generate calculation
-
     genvar i, j;
     generate
-        for (i = 1; i <= BITWIDTH; i = i + 1) begin //from bit 1 to BITWIDTH
-            assign g_intermediate = g[i - 1];
-            for (j = i - 1; j > 0; j = j - 1) begin //from bit i-1 down to bit 1
-                assign g_intermediate = g_intermediate | (p[i - 1] & g[j - 1]);
-            end
-            assign c[i] = g_intermediate;
+        for (i = 0; i < BITWIDTH; i = i + 1) begin
+            assign c[i + 1] = g[i] | (p[i] & c[i]); //calculate carry-out for bit i
         end
     endgenerate
 
     // Calculate final sum bits
     assign sum = bits_a ^ bits_b ^ c[BITWIDTH - 1:0];
-    assign cout = c[BITWIDTH];
+    assign carry_out = c[BITWIDTH];
 
 endmodule
