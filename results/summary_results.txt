@@ -1,0 +1,183 @@
+=== Adder Synthesis Results ===
+Generated: Fri Nov  7 20:49:41 CST 2025
+
+----------------------------------------
+Module: rca (8-bit)
+  Total Cells: 59
+  Total Gates: 37
+    AND gates: 13
+    OR gates: 5
+    XOR gates: 16
+    NOT gates: 3
+    NOR gates: 0
+    XNOR gates: 0
+  Estimated Transistors: 394
+  Estimated Gate Depth: 4.0 levels
+  Estimated Critical Path: .40 ns
+  Estimated Max Frequency: 2500.00 MHz
+
+----------------------------------------
+Module: rca (16-bit)
+  Total Cells: 122
+  Total Gates: 76
+    AND gates: 28
+    OR gates: 6
+    XOR gates: 32
+    NOT gates: 10
+    NOR gates: 0
+    XNOR gates: 0
+  Estimated Transistors: 792
+  Estimated Gate Depth: 8.0 levels
+  Estimated Critical Path: .80 ns
+  Estimated Max Frequency: 1250.00 MHz
+
+----------------------------------------
+Module: rca (32-bit)
+  Total Cells: 250
+  Total Gates: 156
+    AND gates: 60
+    OR gates: 6
+    XOR gates: 64
+    NOT gates: 26
+    NOR gates: 0
+    XNOR gates: 0
+  Estimated Transistors: 1592
+  Estimated Gate Depth: 16.0 levels
+  Estimated Critical Path: 1.60 ns
+  Estimated Max Frequency: 625.00 MHz
+
+----------------------------------------
+Module: rca (64-bit)
+  Total Cells: 460
+  Total Gates: 270
+    AND gates: 78
+    OR gates: 52
+    XOR gates: 128
+    NOT gates: 12
+    NOR gates: 0
+    XNOR gates: 0
+  Estimated Transistors: 3100
+  Estimated Gate Depth: 32.0 levels
+  Estimated Critical Path: 3.20 ns
+  Estimated Max Frequency: 312.50 MHz
+
+----------------------------------------
+Module: cla (8-bit)
+  Total Cells: 65
+  Total Gates: 65
+    AND gates: 16
+    OR gates: 4
+    XOR gates: 10
+    NOT gates: 4
+    NOR gates: 25
+    XNOR gates: 6
+  Estimated Transistors: 420
+  Estimated Gate Depth: 4.50 levels
+  Estimated Critical Path: .45 ns
+  Estimated Max Frequency: 2222.22 MHz
+
+----------------------------------------
+Module: cla (16-bit)
+  Total Cells: 129
+  Total Gates: 129
+    AND gates: 28
+    OR gates: 4
+    XOR gates: 18
+    NOT gates: 4
+    NOR gates: 61
+    XNOR gates: 14
+  Estimated Transistors: 828
+  Estimated Gate Depth: 6.01 levels
+  Estimated Critical Path: .60 ns
+  Estimated Max Frequency: 1666.66 MHz
+
+----------------------------------------
+Module: cla (32-bit)
+  Total Cells: 257
+  Total Gates: 257
+    AND gates: 52
+    OR gates: 4
+    XOR gates: 34
+    NOT gates: 4
+    NOR gates: 133
+    XNOR gates: 30
+  Estimated Transistors: 1644
+  Estimated Gate Depth: 7.51 levels
+  Estimated Critical Path: .75 ns
+  Estimated Max Frequency: 1333.33 MHz
+
+----------------------------------------
+Module: cla (64-bit)
+  Total Cells: 513
+  Total Gates: 513
+    AND gates: 100
+    OR gates: 4
+    XOR gates: 66
+    NOT gates: 4
+    NOR gates: 277
+    XNOR gates: 62
+  Estimated Transistors: 3276
+  Estimated Gate Depth: 9.01 levels
+  Estimated Critical Path: .90 ns
+  Estimated Max Frequency: 1111.11 MHz
+
+----------------------------------------
+Module: prefix (8-bit)
+  Total Cells: 43
+  Total Gates: 41
+    AND gates: 9
+    OR gates: 4
+    XOR gates: 9
+    NOT gates: 3
+    NOR gates: 9
+    XNOR gates: 7
+  Estimated Transistors: 320
+  Estimated Gate Depth: 3.60 levels
+  Estimated Critical Path: .36 ns
+  Estimated Max Frequency: 2777.77 MHz
+
+----------------------------------------
+Module: prefix (16-bit)
+  Total Cells: 83
+  Total Gates: 81
+    AND gates: 17
+    OR gates: 4
+    XOR gates: 17
+    NOT gates: 3
+    NOR gates: 25
+    XNOR gates: 15
+  Estimated Transistors: 624
+  Estimated Gate Depth: 4.81 levels
+  Estimated Critical Path: .48 ns
+  Estimated Max Frequency: 2083.33 MHz
+
+----------------------------------------
+Module: prefix (32-bit)
+  Total Cells: 163
+  Total Gates: 161
+    AND gates: 33
+    OR gates: 4
+    XOR gates: 33
+    NOT gates: 3
+    NOR gates: 57
+    XNOR gates: 31
+  Estimated Transistors: 1232
+  Estimated Gate Depth: 6.01 levels
+  Estimated Critical Path: .60 ns
+  Estimated Max Frequency: 1666.66 MHz
+
+----------------------------------------
+Module: prefix (64-bit)
+  Total Cells: 323
+  Total Gates: 321
+    AND gates: 65
+    OR gates: 4
+    XOR gates: 65
+    NOT gates: 3
+    NOR gates: 121
+    XNOR gates: 63
+  Estimated Transistors: 2448
+  Estimated Gate Depth: 7.21 levels
+  Estimated Critical Path: .72 ns
+  Estimated Max Frequency: 1388.88 MHz
+
