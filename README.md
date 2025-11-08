@@ -2,9 +2,9 @@
 
 ## Release Note
 
-This is a Verilog project meant to compare the speed and resource usage between Ripple-Carry, Carry-Lookahead, and Prefix Adders. This is done by measuring their critical-path delays, estimated maximum frequencies, and area, then considering their practical tradeoffs. These outcomes can be found in results/results.md. 
+This is a Verilog project meant to compare the speed and resource usage between Ripple-Carry, Carry-Lookahead, and Prefix Adders. This is done by measuring their critical-path delays, estimated maximum frequencies, and area, then considering their practical tradeoffs. These summarized outcomes can be found in results/results.md.
 
-All simulations can be run using the run_sim.sh file, but if you wish to run the commands individually, follow the Mac-specific instructions for Icarus and GTKWave below. Otherwise, execute `./tb/run_sim.sh` to run the simulation script, but first make the script executable with `chmod +x tb/run_sim.sh`.
+To run the simulations, execute the run_sim.sh file with `./tb/run_sim.sh` but first make the script executable with `chmod +x tb/run_sim.sh`. For synthesis, execute the measure.sh file with `./synth/measure.sh` but first make the script executable with `chmod +x synth/measure.sh`. Read below if interested in running the terminal commands yourself.
 
 ### Git Workflow
 
